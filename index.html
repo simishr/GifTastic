@@ -1,25 +1,36 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Untitled</title>
-        <!-- CSS LINK -->
+	<head>
+		<meta charset="utf-8">
+		<title>Untitled</title>
+		<!-- CSS LINK -->
 		<link rel="stylesheet" href="./css/style.css" type="text/css">
-       	<!-- JQUERY LINK -->
+		<!-- GOOGLE FONT LINK -->
+		<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+		<!-- JQUERY LINK -->
 		<script type='text/javascript' src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
-    </head>
-    <body>
-		<div id="marineButtons"></div>
-
-		<form id="animal-form">
-			<label for="animal-input">Add an animal</label>
-			<input type="text" id="animal-input">
-			<input id="add-animal" type="submit" value="Submit">
-		</form></input>
-
-		<div id="marine"></div>
-
-        <!-- JAVASCRIPT LINK -->
+	</head>
+	<body>
+		<div class="jumbotron">
+			<div id="marineButtons"></div>
+			<h2 class="text-center">Click on any button to get the gifs!! You can even type in your own marine animal!</h2>
+		</div>
+		
+		
+		<div class="container row">
+			<div class="col-md-9">
+				 THIS AREA IS FOR ALL THE GIFS
+			</div>
+			<div class="col-md-3" id="form-id">
+				<form id="animal-form">
+					<label for="animal-input"> Add an animal</label>
+					<input type="text" id="animal-input">
+					<input id="add-animal" type="submit" value="Submit">
+				</form>
+			</div>
+			
+		</div>
+		<!-- JAVASCRIPT LINK -->
 		<script type='text/javascript' src="./javascript/hw.js"></script>
-    </body>
+	</body>
 </html>

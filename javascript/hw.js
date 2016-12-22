@@ -12,6 +12,7 @@ function displayGifsAndInfos() {
 		method: "GET" 
 	}).done(function (response) {
 			console.log(response);
+
 			for(var j = 0; j < response.data.length; j++) {
 
 				var animalHolder = $("<div class='item'>");
@@ -26,10 +27,10 @@ function displayGifsAndInfos() {
 				console.log(response.data[j].images.fixed_height_still.url);
 				imageHolder.attr("src", response.data[j].images.fixed_height_still.url);
 				
-				var gifHolder = $("<img>").addClass("gifClass");
-				$("#animal-form").append(gifHolder);
-				console.log(response.data[j].images.fixed_height.url);
-				gifHolder.attr("src",response.data[j].images.fixed_height.url);
+				// var gifHolder = $("<img>").addClass("gifClass");
+				// $("#animal-form").append(gifHolder);
+				// console.log(response.data[j].images.fixed_height.url);
+				// gifHolder.attr("src",response.data[j].images.fixed_height.url);
 			}
 		});
 }
@@ -50,10 +51,16 @@ function renderButtons() {
 		var animal = $("#animal-input").val().trim();
 		animalList.push(animal);
 		renderButtons();
-		$(gifHolder).hide();
 	});
 
 	$(document).on("click", ".marine-class", displayGifsAndInfos);
 	renderButtons();
 
-	
+	$("#form-id").on("click", function() {
+		console.log("works");
+		console.log(this);
+		$("#form-id").attr("src", this.images.fixed_height.url);
+
+	});
+
+
