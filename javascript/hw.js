@@ -18,15 +18,16 @@ function displayGifsAndInfos() {
 				var animalHolder = $("<div class='item'>");
 
 				var ratingHolder = $("<div>").addClass("ratingClass");
-				$("#animal-form").append(ratingHolder);
+				$("#gif-area").append(ratingHolder);
 				console.log(response.data[j].rating);
 				ratingHolder.html(response.data[j].rating);
 
 				var imageHolder = $("<img>").addClass("imageClass");
-				$("#animal-form").append(imageHolder);
+				$("#gif-area").append(imageHolder);
 				console.log(response.data[j].images.fixed_height_still.url);
 				imageHolder.attr("src", response.data[j].images.fixed_height_still.url);
 				
+				//	gif-portion
 				// var gifHolder = $("<img>").addClass("gifClass");
 				// $("#animal-form").append(gifHolder);
 				// console.log(response.data[j].images.fixed_height.url);
