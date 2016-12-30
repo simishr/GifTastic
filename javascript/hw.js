@@ -1,4 +1,4 @@
-//Array of animals
+//Array of Marine Animals
 var animalList = ["Dolphin", "Whale", "Shark", "Starfish", "Seahorse", "Jellyfish", "Turtle", "Crab"];
 
 function displayGifsAndInfos() {
@@ -18,7 +18,7 @@ function displayGifsAndInfos() {
 			console.log(response);
 
 			var results = response.data;
-
+			//Looping through the response
 			for(var j = 0; j < results.length; j++) {
 
 				var still_URL =  results[j].images.fixed_height_still.url ;
@@ -39,7 +39,7 @@ function displayGifsAndInfos() {
 		});
 	
 	}
-	//onclick event handler
+	//Onclick event handler for the images and gifs
 	$("#gif-area").on("click",".imageClass" , function() {
 		console.log($(this).attr("src"));
 		var source_URL = $(this).attr("src");
@@ -51,13 +51,13 @@ function displayGifsAndInfos() {
 		} else {
 			$(this).attr("src", still_URL);
 		}
-
 	});
 
 
 function renderButtons() {
 	// Deletes the animals prior to adding new animals
 	$("#marineButtons").empty();
+	//Empties the gifs area 
 	$("#gif-area").empty();
 	// Loops through the array of animals
 	for (var i = 0; i < animalList.length; i++) {
