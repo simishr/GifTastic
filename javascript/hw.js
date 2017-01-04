@@ -5,7 +5,7 @@ function displayGifsAndInfos() {
 
 	var marine = $(this).attr("data-name");
 	var myKey = "&api_key=dc6zaTOxFJmzC";
-	var queryURL = "http://api.giphy.com/v1/gifs/search?limit=10&q=" + marine + myKey;
+	var queryURL = "https://api.giphy.com/v1/gifs/search?limit=10&q=" + marine + myKey;
 
 	$("#gif-area").empty();
 

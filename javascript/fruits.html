@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fruits Giffy</title>
+        <!-- <link rel="stylesheet" href="./css/style.css" text="text/css"> -->
+        <!-- JQUERY LINK -->
+		<script type='text/javascript' src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
+    </head>
+    <body>
+     	<div class="jumbotron">
+     		<h1>Fruits Giphy</h1>
+     	</div>  
+        
+    </body>
+    <script>
+
+    // array of fruits
+    var fruitsList = ["apple", "orange", "pineapple", "banana", "watermelon"];
+
+function displayGifs() {
+
+	var fruits = $(this).attr("data-name");
+	var myKey = "&api_key=dc6zaTOxFJmzC";
+	var queryURL = "http://api.giphy.com/v1/gifs/search?limit=10&q=" + fruits + myKey;
+	$.ajax({
+		url : queryURL,
+		method : "GET"
+	}).done (function (response) {
+
+		console.log(response);
+	})
+
+	
+}
+
+displayGifs();
+    </script>
+</html>
